@@ -1,0 +1,232 @@
+body{
+    background-color: black;
+    color: rgb(248, 248, 248);
+    font-family: myAv;
+    text-transform: uppercase;
+}
+
+
+@font-face {
+    font-family: myAv;
+    src: url(Avenir.ttf);
+}
+
+@font-face {
+    font-family: mySeq;
+    src: url(seq.ttf);
+}
+
+@font-face {
+    font-family: avBold;
+    src: url(Avenir-Bold.ttf);
+}
+nav {
+    text-decoration: none;
+    color: rgb(248, 248, 248);
+    list-style-type: none;
+   padding: 5px;
+
+}
+
+
+
+
+header nav ul li {
+    padding: 20px;
+    display: inline;
+    margin-right: 30px;
+ 
+
+}
+
+
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.reza_logo{
+
+    text-align: center;
+    border-style: solid;
+    margin: 10px;
+    border: 10px;
+    border-color: aqua;
+
+}
+
+
+header {
+ 
+    align-items:flex-end;
+
+
+}
+
+
+.lyop_logo{
+  
+    text-align: center;
+    display: flex;
+    justify-content: end;
+}
+
+.me_pic {
+    width: 20%;
+ 
+   
+   
+}
+
+.main_blurb
+{
+    text-align: center;
+    width: 20%;
+
+}
+
+
+
+
+
+main {
+    display: flex; /* This turns main into a flex container */
+    justify-content: center; /* This centers the flex items horizontally */
+    align-items: center; /* This centers the flex items vertically */
+    font-family: mySeq;
+}
+
+.me_pic,
+.main_blurb {
+    flex: 1; /* This allows both elements to take equal width */
+    padding: 20px; /* Add some padding for better spacing */
+    margin-top: 104pt;
+    
+}
+
+.main_blurb{
+    margin-bottom: 100pt;
+    font-size: 21pt;
+}
+/* Optional: You might want to adjust the width or add some margin for better spacing */
+.me_pic {
+    margin-right: 20px; /* Adds some space between the picture and the text */
+}
+
+header {
+    display: flex; /* Turns header into a flex container */
+    justify-content: space-between; /* Distributes space evenly between the items */
+    align-items: center; /* Aligns items vertically in the center */
+    padding: 0 10px; /* Optional: Adds some padding to the header */
+}
+
+nav, .reza_logo, .lyop_logo {
+    flex: 1; /* Each element will take equal width */
+    text-align: center; /* Centers content inside each element */
+}
+
+nav ul {
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    list-style-type: none; /* Removes default list style */
+}
+
+nav ul li {
+    display: inline; /* Keeps the nav items in line */
+    padding: 0 10px; /* Adds some padding around each nav item */
+}
+
+.storypichover {
+    animation: hoverAnimation 9s ease-in-out infinite; /* Apply the animation */
+    /* You can add other styles here if needed */
+  }
+  
+  @keyframes hoverAnimation {
+    0%, 100% { transform: translateY(0); } /* Starting and ending at the same position */
+    50% { transform: translateY(-20px); } /* Move up 20 pixels at the midpoint */
+  }
+  
+  .shoe_pic {
+    animation: hoverAnimation 9s ease-in-out infinite; /* Apply the animation */
+    /* You can add other styles here if needed */
+  }
+  
+  @keyframes hoverAnimation {
+    0%, 100% { transform: translateY(0); } /* Starting and ending at the same position */
+    50% { transform: translateY(-20px); } /* Move up 20 pixels at the midpoint */
+  }
+
+
+  .me_pic {
+    animation: hoverAnimation 6s ease-in-out infinite; /* Apply the animation */
+    /* You can add other styles here if needed */
+  }
+  
+  @keyframes hoverAnimation {
+    0%, 100% { transform: translateY(0); } /* Starting and ending at the same position */
+    50% { transform: translateY(-20px); } /* Move up 20 pixels at the midpoint */
+  }
+
+
+  .lyop_logo {
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    transform: translateX(-40px); /* Move the element 20 pixels to the left */
+}
+
+html, body {
+   
+    overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+    height: vh; /* Header takes up 10% of the viewport height */
+    /* Other styling */
+}
+
+main {
+    height: 90vh; /* Main content takes up the remaining 90% of the viewport height */
+    /* Other styling */
+}
+
+main {
+    position: fixed; /* Fixed positioning relative to the viewport */
+    bottom: 0; /* Aligns the element to the bottom of the viewport */
+    left: 0; /* Aligns the element to the left of the viewport */
+    width: 100%; /* Ensures that the element spans the full width of the viewport */
+    /* Additional styling as needed */
+}
+
+
+main {
+    display: flex;
+    /* Your existing main styles... */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) { /* Adjust the max-width as needed */
+    main {
+        flex-direction: column; /* Stack flex items vertically */
+    }
+
+    .main_blurb, .me_pic {
+        width: 100%; /* Make each item take full width of the container */
+        order: 1; /* Optional: Explicitly define order if needed */
+    }
+
+    .me_pic {
+        order: 2; /* Make me_pic come after main_blurb */
+        /* Adjust other styles for mobile as needed */
+    }
+}
+
+@media (max-width: 600px) {
+    /* Other styles... */
+
+    .me_pic {
+        margin-bottom: 1000px; /* Adjust space above the image */
+        /* Other adjustments */
+    }
